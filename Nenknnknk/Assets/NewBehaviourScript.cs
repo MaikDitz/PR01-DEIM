@@ -12,17 +12,21 @@ public class NewBehaviourScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-     
+        while(Edad <= 18)
+        {
+            print(Edad);
+            Edad++;
+        }
+        for(Var1 = 2; Var1 <= 20;)
+        {
+            print(Var1);
+            Var1++;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
         
-        if (Edad <= 18)
-        {
-            print(Edad);
-            Edad++;
-        }
     }
 }

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    private int Var1 = 2;
-    private string Var2 = "hola wenas";
-    private float Var3 = 4f;
-    private bool Var4 = true;
+    public int Var1 = 2;
+    public string Var2 = "hola wenas";
+    public float Var3 = 4f;
+    public bool Var4 = true;
     // Start is called before the first frame update
     void Start()
     {

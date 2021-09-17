@@ -331,6 +331,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3adc38937c0e9fb409b5f197cfd865cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Var1: 3
+  Var2: Chao
+  Var3: 2
+  Var4: 0
 --- !u!65 &1527055832
 BoxCollider:
   m_ObjectHideFlags: 0

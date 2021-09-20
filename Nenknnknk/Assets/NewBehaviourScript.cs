@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class NewBehaviourScript : MonoBehaviour
 {
     public int Var1 = 2;
@@ -12,21 +11,28 @@ public class NewBehaviourScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        while(Edad <= 18)
+        for (; Edad < 19; Edad++)
         {
-            print(Edad);
-            Edad++;
-        }
-        for(Var1 = 2; Var1 <= 20;)
-        {
-            print(Var1);
-            Var1++;
-        }
-    }
+            if (Edad < 10)
+            {
+                print("Tas chiquito");
+            }
 
+            else if (Edad >= 10 && Edad < 18)
+            {
+                print("Tas medio chiquito");
+            }
+            else
+            {
+                print("Tas mayor");
+            }
+        }
+            
+
+    }
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

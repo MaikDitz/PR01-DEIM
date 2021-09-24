@@ -8,19 +8,24 @@ public class NewBehaviourScript : MonoBehaviour
     public float Var3 = 4f;
     public bool Var4 = true;
     public int Edad = 1;
-    public int Aleatorio;
+
     // Start is called before the first frame update
     void Start()
     {
-        while (Aleatorio != 5)
-        {
-            Aleatorio = Random.Range(0, 10);
-            print("El numero es " + Aleatorio);
-        }
+
+        saludar("patatas");
+        saludar("webon");
     }
     // Update is called once per frame
     void Update()
     {
 
     }
-}
+
+    void saludar(string hola)
+    {
+        print("Hola " + hola);
+
+    }
+
+    }

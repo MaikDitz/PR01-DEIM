@@ -1,13 +1,49 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 public class NewBehaviourScript : MonoBehaviour
 {
-    private float MyVar; 
+    [SerializeField] Text text1;
+    public Text timer;
     // Start is called before the first frame update
     void Start()
     {
-        Cuentas(7, 5, "sumar");
+        {
+            StartCoroutine("Cronometro");
+        }
+
+        IEnumerator Cronometro()
+        {
+
+            int x = 0;
+            int y = 0;
+            int z = 0;
+
+            while (true)
+            {
+
+                print("La hora es" + z + " : " + y + " : " + x + " : ");
+
+                text1.text = "La hora es " + z.ToString("D2") + " : " + y.ToString("D2") + " : " + x.ToString("D2") + " : ";
+                x++;
+
+                yield return new WaitForSeconds(1f);
+
+                if (x == 60)
+                {
+                    x = 0;
+                    y++;
+                }
+                if (y == 60)
+                {
+                    y = 0;
+                    z++;
+                }
+
+
+            }
+        }
     }
 
     // Update is called once per frame
@@ -16,68 +52,6 @@ public class NewBehaviourScript : MonoBehaviour
 
     }
 
-    void Cuentas(int Num1, int Num2, string operacion)
-    {
-        if(operacion == "dividir")
-        {
-            int Num3 = Num1 / Num2;
-
-            if (Num3 % 2 == 0)
-            {
-                print(Num3 + " numero par");
-            }
-
-            else
-            {
-                print(Num3 + " numero impar");
-            }
-        }
-
-        else if(operacion == "sumar")
-        {
-            int Num3 = Num1 + Num2;
-
-            if (Num3 % 2 == 0)
-            {
-                print(Num3 + " numero par");
-            }
-
-            else
-            {
-                print(Num3 + " numero impar");
-            }
-        }
-
-        else if(operacion == "restar")
-        {
-            int Num3 = Num1 - Num2;
-
-            if (Num3 % 2 == 0)
-            {
-                print(Num3 + " numero par");
-            }
-
-            else
-            {
-                print(Num3 + " numero impar");
-            }
-        }
-
-        else if(operacion == "multiplicar")
-        {
-            int Num3 = Num1 * Num2;
-
-            if (Num3 % 2 == 0)
-            {
-                print(Num3 + " numero par");
-            }
-
-            else
-            {
-                print(Num3 + " numero impar");
-            }
-        }
-
-    }
+ 
 
 }

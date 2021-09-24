@@ -7,9 +7,7 @@ public class NewBehaviourScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        MyVar = multiplicar(5.4f, 6.3f);
-        print(MyVar);
+        Cuentas(7, 5, "sumar");
     }
 
     // Update is called once per frame
@@ -18,10 +16,68 @@ public class NewBehaviourScript : MonoBehaviour
 
     }
 
-     float multiplicar(float num1, float num2)
+    void Cuentas(int Num1, int Num2, string operacion)
     {
-        float resultado = num1 + num2;
-        return resultado;
+        if(operacion == "dividir")
+        {
+            int Num3 = Num1 / Num2;
+
+            if (Num3 % 2 == 0)
+            {
+                print(Num3 + " numero par");
+            }
+
+            else
+            {
+                print(Num3 + " numero impar");
+            }
+        }
+
+        else if(operacion == "sumar")
+        {
+            int Num3 = Num1 + Num2;
+
+            if (Num3 % 2 == 0)
+            {
+                print(Num3 + " numero par");
+            }
+
+            else
+            {
+                print(Num3 + " numero impar");
+            }
+        }
+
+        else if(operacion == "restar")
+        {
+            int Num3 = Num1 - Num2;
+
+            if (Num3 % 2 == 0)
+            {
+                print(Num3 + " numero par");
+            }
+
+            else
+            {
+                print(Num3 + " numero impar");
+            }
+        }
+
+        else if(operacion == "multiplicar")
+        {
+            int Num3 = Num1 * Num2;
+
+            if (Num3 % 2 == 0)
+            {
+                print(Num3 + " numero par");
+            }
+
+            else
+            {
+                print(Num3 + " numero impar");
+            }
+        }
+
     }
 
 }

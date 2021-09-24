@@ -3,29 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 public class NewBehaviourScript : MonoBehaviour
 {
-    public int Var1 = 10;
-    public string Var2 = "hola wenas";
-    public float Var3 = 4f;
-    public bool Var4 = true;
-    public int Edad = 1;
-
+    private float MyVar; 
     // Start is called before the first frame update
     void Start()
     {
 
-        saludar("patatas");
-        saludar("webon");
+        MyVar = multiplicar(5.4f, 6.3f);
+        print(MyVar);
     }
+
     // Update is called once per frame
     void Update()
     {
 
     }
 
-    void saludar(string hola)
+     float multiplicar(float num1, float num2)
     {
-        print("Hola " + hola);
-
+        float resultado = num1 + num2;
+        return resultado;
     }
 
-    }
+}
